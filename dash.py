@@ -41,7 +41,7 @@ modelo = SARIMAX(df['TOT DBTS (0)'], order=(9, 2, 3), seasonal_order=(0, 0, 0, 0
 resultado = modelo.fit()
 
 # Vamos fazer a previsão dos próximos 15 dias
-forecast = resultado.forecast(15)
+forecast = resultado.forecast(30)
 
 # Sub-título
 st.subheader('Dados Previstos')
@@ -55,7 +55,7 @@ st.subheader('Previsão de Débitos da Conta NY')
 # Plot
 fig = go.Figure()
 start = list(range(0, len(df['TOT DBTS (0)'])))
-end = list(range(len(df['TOT DBTS (0)']),len(df['TOT DBTS (0)'])+16 ))
+end = list(range(len(df['TOT DBTS (0)']),len(df['TOT DBTS (0)'])+31 ))
 
 fig.add_trace(go.Scatter(y = df['TOT DBTS (0)'],x = start, name = "Dados do Passado"))
 fig.add_trace(go.Scatter(y =  forecast, x = end, name = "Previsão"))
