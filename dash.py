@@ -59,5 +59,6 @@ end = list(range(len(df['TOT DBTS (0)']),len(df['TOT DBTS (0)'])+16 ))
 
 fig.add_trace(go.Scatter(y = df['TOT DBTS (0)'],x = start, name = "Dados do Passado"))
 fig.add_trace(go.Scatter(y =  forecast, x = end, name = "Previsão"))
+st.plotly_chart(fig)
 
 # Fim
