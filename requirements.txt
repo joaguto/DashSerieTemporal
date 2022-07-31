@@ -2,3 +2,4 @@ matplotlib
 datetime
 plotly
 openpyxl
+statsmodels
