@@ -17,7 +17,7 @@ df = pd.read_excel('Dados_final.xlsx', sheet_name='Planilha1')
 
 # Sub-título
 st.subheader('Visualização dos Dados Brutos')
-st.write(dados.tail())
+st.write(df.tail())
 
 
 # Função para o plot dos dados brutos
