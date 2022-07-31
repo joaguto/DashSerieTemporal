@@ -53,7 +53,9 @@ st.write(resultado.forecast(15).tail())
 st.subheader('Previsão de Débitos da Conta NY')
 
 # Plot
-grafico2 = plot_plotly(modelo, forecast)
-st.plotly_chart(grafico2)
+fig = go.Figure()
+fig.add_trace(go.Scatter(df['TOT DBTS (0)'], name = "Dados do Passado"))
+fig.add_trace(go.Scatter( forecast, name = "Previsão"))
+st.plotly_chart(fig)
 
 # Fim
