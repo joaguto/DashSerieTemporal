@@ -6,7 +6,7 @@ import numpy as np
 import streamlit as st
 import matplotlib.pyplot as plt
 from plotly import graph_objs as go
-from datetime import date]
+from datetime import date
 from statsmodels.tsa.statespace.sarimax import SARIMAX
 
 # Define o título do Dashboard
