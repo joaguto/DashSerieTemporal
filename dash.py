@@ -23,7 +23,7 @@ st.write(df.tail())
 # Função para o plot dos dados brutos
 def plot_dados_brutos():
     fig = go.Figure()
-    fig.add_trace(go.Scatter(x=df['TOT DBTS (0)'], y=df['data'], name="Débitos ao Longo do Tempo"))
+    fig.add_trace(go.Scatter(x=df['TOT DBTS (0)'], y=df['Data'], name="Débitos ao Longo do Tempo"))
     fig.layout.update(title_text='Débitos da Conta NY', xaxis_rangeslider_visible=True)
     st.plotly_chart(fig)
 
