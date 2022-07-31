@@ -54,8 +54,10 @@ st.subheader('Previsão de Débitos da Conta NY')
 
 # Plot
 fig = go.Figure()
-fig.add_trace(go.Scatter(df['TOT DBTS (0)'], name = "Dados do Passado"))
-fig.add_trace(go.Scatter( forecast, name = "Previsão"))
-st.plotly_chart(fig)
+start = list(range(0, len(df['TOT DBTS (0)'])))
+end = list(range(len(df['TOT DBTS (0)']),len(df['TOT DBTS (0)'])+16 ))
+
+fig.add_trace(go.Scatter(y = df['TOT DBTS (0)'],x = start, name = "Dados do Passado"))
+fig.add_trace(go.Scatter(y =  forecast, x = end, name = "Previsão"))
 
 # Fim
