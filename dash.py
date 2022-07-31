@@ -47,7 +47,7 @@ forecast = resultado.forecast(15)
 st.subheader('Dados Previstos')
 
 # Dados previstos
-st.write(resultado.forecast(15).tail())
+st.write(resultado.forecast(15).tail().round(2))
 
 # Título
 st.subheader('Previsão de Débitos da Conta NY')
