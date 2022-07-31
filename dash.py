@@ -1,6 +1,7 @@
 # Mini-Projeto 2 - Data App - Dashboard Financeiro Interativo e em Tempo Real Para Previsão de Ativos Financeiros
 
 # Imports
+import pandas as pd
 import numpy as np
 import streamlit as st
 import matplotlib.pyplot as plt
